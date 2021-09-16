@@ -34,8 +34,7 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@apollo/react-common": "^3.1.3",
-    "@apollo/react-hooks": "^3.1.3",
+    "@apollo/client": "^3.4.11",
     "@babel/core": "^7.14.6",
     "@shopify/loom": "^0.7.0",
     "@shopify/loom-cli": "^0.7.0",
@@ -53,8 +52,6 @@
     "@types/faker": "^4.1.5",
     "@types/react": "17.0.13",
     "@types/react-dom": "^17.0.8",
-    "apollo-cache-inmemory": "^1.3.6",
-    "apollo-client": "^2.3.8",
     "babel-loader": "^8.0.6",
     "cross-fetch": "^3.0.4",
     "element-closest": "^3.0.1",
@@ -64,7 +61,6 @@
     "get-port": "^5.0.0",
     "glob": "^7.1.6",
     "graphql": "^15.4.0",
-    "graphql-tag": "^2.10.3",
     "intl-pluralrules": "^0.2.1",
     "jest-extended": "^0.11.5",
     "jest-transform-graphql": "^2.1.0",

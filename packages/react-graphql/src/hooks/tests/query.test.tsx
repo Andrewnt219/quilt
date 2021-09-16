@@ -1,9 +1,8 @@
 import React from 'react';
-import gql from 'graphql-tag';
-import ApolloClient, {NetworkStatus} from 'apollo-client';
-import {ApolloLink} from 'apollo-link';
-import {InMemoryCache} from 'apollo-cache-inmemory';
+import {ApolloClient, NetworkStatus, ApolloLink, gql} from '@apollo/client';
+import {InMemoryCache} from '@apollo/client/cache';
 import {createGraphQLFactory} from '@shopify/graphql-testing';
+import {act} from '@shopify/react-testing';
 
 import {createAsyncQueryComponent} from '../../async';
 import useQuery from '../query';
@@ -39,9 +38,11 @@ describe('useQuery', () => {
       const graphQL = createGraphQL({PetQuery: mockData});
       const renderPropSpy = jest.fn(() => null);
 
-      await mountWithGraphQL(<MockQuery>{renderPropSpy}</MockQuery>, {
-        graphQL,
-        skipInitialGraphQL: true,
+      await act(async () => {
+        await mountWithGraphQL(<MockQuery>{renderPropSpy}</MockQuery>, {
+          graphQL,
+          skipInitialGraphQL: true,
+        });
       });
 
       expect(renderPropSpy).toHaveBeenLastCalledWith(
@@ -61,9 +62,11 @@ describe('useQuery', () => {
       const graphQL = createGraphQL({PetQuery: mockData});
       const renderPropSpy = jest.fn(() => null);
 
-      await mountWithGraphQL(<MockQuery>{renderPropSpy}</MockQuery>, {
-        graphQL,
-        skipInitialGraphQL: true,
+      await act(async () => {
+        await mountWithGraphQL(<MockQuery>{renderPropSpy}</MockQuery>, {
+          graphQL,
+          skipInitialGraphQL: true,
+        });
       });
 
       expect(renderPropSpy).toHaveBeenLastCalledWith(
