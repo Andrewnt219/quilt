@@ -10,6 +10,7 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 ### Changed
 
 - Migrate from `sewing-kit-next` to `loom` for building - package build output remains identical. [[#2039](https://github.com/Shopify/quilt/pull/2039)]
+- Transforming the space for a non-breaking space on formatted time. [[#2041](https://github.com/Shopify/quilt/pull/2041)]
 
 ## 6.2.2 - 2021-09-14
 
